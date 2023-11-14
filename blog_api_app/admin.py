@@ -14,3 +14,5 @@ admin.site.register(UserWhitelistToken)
 
 
 admin.site.site_header = "Blog Application API"
+admin.site.index_title = ""
+admin.site.site_title = "Admin Panel"
