@@ -1,7 +1,7 @@
 import re
 
 
-def validate_password(password):
+def check_password(password):
     # Check if password is at least 8 characters long
     if len(password) < 8:
         return False, "Password must be at least 8 characters long"
@@ -27,7 +27,7 @@ def validate_password(password):
     return True, "Password meets all requirements"
 
 
-def validate_email(email):
+def check_email(email):
     emailregix = r'\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}\b'
 
     if(re.match(emailregix, email)):
