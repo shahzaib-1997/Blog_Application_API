@@ -1,0 +1,165 @@
+{
+	"info": {
+		"_postman_id": "21dcb1ac-0948-4a39-895c-019d0853486e",
+		"name": "Blog App API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28031290"
+	},
+	"item": [
+		{
+			"name": "User Registration",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "shery@minsoft.com",
+							"type": "text"
+						},
+						{
+							"key": "username",
+							"value": "shery_hanif",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "Shery_hanif@1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/blog_api/register/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"blog_api",
+						"register",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User Login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "shery@minsoft.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "Shery_hanif@1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/blog_api/login/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"blog_api",
+						"login",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Blog Post",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token 55b9774e8e7e323e9f2fc4eaef137c3160178b4d",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user\": \"964133a4-f817-4723-9de7-ede09c1d05f6\",\r\n    \"title\": \"Test Title 2\",\r\n    \"content\": \"Test Content 2\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/blog_api/create-blog-post/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"blog_api",
+						"create-blog-post",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Comment",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user\": \"8726909e-5caa-45b1-9a02-df01494a8482\",\r\n    \"comment\": \"Test comment.\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/blog_api/comment/?post_id= d71a1492-dccc-4fec-bafb-ca626fd68b00",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"blog_api",
+						"comment",
+						""
+					],
+					"query": [
+						{
+							"key": "post_id",
+							"value": " d71a1492-dccc-4fec-bafb-ca626fd68b00"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
