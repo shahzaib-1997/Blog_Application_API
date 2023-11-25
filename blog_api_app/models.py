@@ -1,6 +1,6 @@
+import uuid
 from django.contrib.auth.models import AbstractUser
 from django.db import models
-import uuid
 
 
 class BaseModel(models.Model):
@@ -20,7 +20,7 @@ class User(AbstractUser, BaseModel):
 
     def __str__(self):
         return self.email
-    
+
 
 class Post(BaseModel):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
