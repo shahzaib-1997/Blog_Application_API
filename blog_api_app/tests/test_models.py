@@ -44,3 +44,19 @@ class ModelTestCase(TestCase):
         self.assertEqual(comment.post, self.post)
         self.assertEqual(comment.comment, 'This is a test comment.')
         self.assertEqual(str(comment), 'testuser - Test Post')
+
+
+'''
+Result:
+
+python manage.py test blog_api_app.tests.test_models
+Found 3 test(s).
+Creating test database for alias 'default'...
+System check identified no issues (0 silenced).
+...
+----------------------------------------------------------------------
+Ran 3 tests in 6.356s
+
+OK
+Destroying test database for alias 'default'...
+'''
